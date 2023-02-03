@@ -38,6 +38,9 @@ for page in range(1, 21):
                 rating = div.find('span', {'class':'a-icon-alt'}).text.split()[0]
                 reviews = div.find('span', {'class':'a-size-base s-underline-text'}).text
                 
+                if 'sspa' in url:
+                    continue
+                    
                 row.append(1)
                 row.append(name.text)
                 row.append(price)
